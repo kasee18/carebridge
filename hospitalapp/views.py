@@ -49,16 +49,17 @@ def contacts(request):
             name=request.POST["name"],
             email=request.POST["email"],
             subject=request.POST["subject"],
-            phonenumber=request.POST["phonenumber"],
             message=request.POST["message"],
-            address=request.POST["address"],
-            emailuser=request.POST["emailuser"],
         )
 
         call.save()
-        return redirect('/')
+        return redirect('/contacts')
     else:
         return render(request, 'contacts.html')
+
+def show(request):
+     all = Appoint.objects.all()
+     return render(request, 'show.html', {"all":all})
 
 
 

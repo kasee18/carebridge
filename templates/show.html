@@ -1,0 +1,40 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1 class="text-center">List of Booked Appointments</h1>
+
+    <table class="table table-warning container">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Date</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Message</th>
+        <th>Action</th>
+    </tr>
+    {% for appointment in all %}
+        
+        <tr>
+            <td>{{ appointment.name }}</td>
+            <td>{{ appointment.email }}</td>
+            <td>{{ appointment.phone }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.doctor }}</td>
+            <td>{{ appointment.Message }}</td>
+        <td>
+            <a href="" class="btn btn-outline-success">Edit</a>
+            <a href="" class="btn btn-outline-danger">Delete</a>
+
+        </td>
+        </tr>
+    	
+    {% endfor %}
+    
+    </table>
+
+
+{% endblock %}
