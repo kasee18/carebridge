@@ -32,3 +32,27 @@ class ward(models.Model):
     def __str__(self):
         return self.name + "  " + self.department + "  " + self.description
 
+class Appoint(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=10)
+    date = models.DateTimeField()
+    department = models.CharField(max_length=100)
+    doctor = models.CharField(max_length=100)
+    message = models.TextField()
+
+    def __str__(self):
+       return self.name
+
+class contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    subject = models.CharField(max_length=100)
+    phonenumber = models.CharField(max_length=10)
+    message = models.TextField()
+    address = models.TextField()
+    emailuser = models.EmailField()
+
+    def __str__(self):
+        return self.name
+
