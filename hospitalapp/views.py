@@ -61,5 +61,9 @@ def show(request):
      all = Appoint.objects.all()
      return render(request, 'show.html', {"all":all})
 
+def displayed(request):
+    all = ward.objects.all()
+    return render(request,'displayed.html', {"all":all})
+
 
 

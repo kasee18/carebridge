@@ -1,0 +1,35 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block content %}
+    
+<h1 class="text-center">List of Wards</h1>
+    
+    <table class="table-warning table-bordered container">
+    
+    <tr>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Department</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    {% for displayed in all %}
+
+        <tr>
+            <td>{{ displayed.name }}</td>
+            <td>{{ displayed.capacity }}</td>
+            <td>{{ displayed.department }}</td>
+            <td>{{ displayed.description }}</td>
+        <td>
+            <a href=""class="btn btn-outline-primary">Edit</a>
+            <a href=""class="btn btn-outline-danger">Delete</a>
+        </td>
+        </tr>
+
+    {% endfor %}
+
+    
+    </table>
+	
+{% endblock %}
