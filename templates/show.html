@@ -25,8 +25,8 @@
             <td>{{ appointment.doctor }}</td>
             <td>{{ appointment.Message }}</td>
         <td>
-            <a href="" class="btn btn-outline-success">Edit</a>
-            <a href="" class="btn btn-outline-danger">Delete</a>
+            <a href="/edit/{{ appointment.id }}" class="btn btn-outline-success">Edit</a>
+            <a href="/delete/{{ appointment.id }}" class="btn btn-outline-danger">Delete</a>
 
         </td>
         </tr>
